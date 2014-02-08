@@ -21,19 +21,16 @@ FIND_LIBRARY(ODE_LIBRARY
 SET( src_files
 #  src/YGEGame.cpp
   src/GameHUD.cpp
-  src/GameStateX.cpp
-#  src/GameStateIngame.cpp
-#  src/GameLevel.cpp
-#  src/GameStateSplashscreen.cpp
-#  src/GameRocket.cpp
-#  src/Menu.cpp
-#  src/GameStateZ.cpp
-#  src/GameGyrocopter.cpp
-#  src/GameBall.cpp
+  src/GameStateIngame.cpp
+  src/GameLevel.cpp
+  src/GameStateSplashscreen.cpp
+  src/GameRocket.cpp
+  src/Menu.cpp
+  src/GameGyrocopter.cpp
+  src/GameBall.cpp
 #  src/stdafx.cpp
-#  src/GameStateY.cpp
   src/GameManager.cpp
-#  src/GameStateMainmenu.cpp  src/YGESkybox.cpp
+  src/GameStateMainmenu.cpp
 )
 
 
@@ -59,6 +56,7 @@ LINK_LIBRARIES(
   SDL_ttf
   GL
   GLU
+  glee
   ode
   alut
 )

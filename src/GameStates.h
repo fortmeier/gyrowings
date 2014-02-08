@@ -21,6 +21,7 @@
 
 using namespace YGETimeSpace;
 using namespace YGEGraphics;
+using namespace YGEInput;
 
 class GameStateX : public YGEGame::YGEGameState {
 public:
@@ -31,8 +32,8 @@ public:
 
 	GameStateX();
 
-	virtual YGESceneList* getScenesToRender();
-	virtual YGESpaceList* getSpacesToUpdate();
+	virtual YGESceneList& getScenesToRender();
+	virtual YGESpaceList& getSpacesToUpdate();
 
 	virtual void update();
 
@@ -58,7 +59,7 @@ public:
 
 	GameStateY();
 
-	virtual YGESceneList getScenesToRender();
+	virtual YGESceneList& getScenesToRender();
 
 	virtual void update();
 
@@ -79,7 +80,7 @@ public:
 
 	GameStateZ();
 
-	virtual YGESceneList* getScenesToRender();
+	virtual YGESceneList& getScenesToRender();
 
 	virtual void update();
 

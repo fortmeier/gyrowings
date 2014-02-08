@@ -1,6 +1,6 @@
 #include "GameStates.h"
 #include "YGEStaticMesh.h"
-//#include "YGEMassAsset.h"
+#include "YGEMassAsset.h"
 #include "Camera.h"
 
 GameStateX::GameStateX(){
@@ -63,27 +63,19 @@ GameStateX::GameStateX(){
 	space->getRootEntity()->addAsset(heightmap);
 	heightmap->makeSolid();
 
-}
-
-YGESceneList GameStateX::getScenesToRender(){
 	YGEScene s;
 	s.first = space;
 	s.second = NULL;
-	YGESceneList list;
-	list.push_back(s);
-	return list;
-}
+	scenelist.push_back(s);
 
-YGESpaceList  GameStateX::getSpacesToUpdate() {
-		YGESpaceList list;
-		list.push_back(space);
-		return list;
+	spacelist.push_back(space);
+
 }
 
 void GameStateX::update() {
 	YGECore::YGELogger::getInstance()->log("Updating Gamestate X");
 
-	gyro->update();
+	gyro->update(0);
 
 
 

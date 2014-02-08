@@ -107,7 +107,7 @@ void GameLevel::createFromFile(const char* filename){
 	space->getSunlight()->setColor((float)suncolor.x, (float)suncolor.y, (float)suncolor.z);
 	space->getSunlight()->setDirection(sunposition);
 
-	for(std::list<std::pair<YGEMath::Vector3, std::string>>::iterator iter = ballPositions.begin(); iter != ballPositions.end(); iter++){
+	for(std::list<std::pair<YGEMath::Vector3, std::string> >::iterator iter = ballPositions.begin(); iter != ballPositions.end(); iter++){
 
 		GameBall* ball;
 

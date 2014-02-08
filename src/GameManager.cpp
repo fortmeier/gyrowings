@@ -170,7 +170,7 @@ void GameManager::keyDown(SDLKey key){
 }
 
 
-int _tmain(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
 
 	GameManager::getInstance()->initAndStartGame();
